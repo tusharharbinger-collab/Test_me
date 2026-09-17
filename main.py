@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="test_me", version="1.0.0")
+app = FastAPI(title="test_me", version="1.1.0")
 
 
 @app.get("/healthz")
@@ -12,6 +12,6 @@ def healthz():
 def catch_all(full_path: str):
     return {
         "received_path": full_path,
-        "message": "Hello from Test_me",
-        "version": "1.0.0",
+        "message": "Hello from Test_me - v1.1.0",
+        "version": "1.1.0",
     }
